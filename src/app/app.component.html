@@ -1,0 +1,31 @@
+<kendo-listview
+  [data]="view"
+  [style.height]="'100vh'"
+  containerClass="k-d-grid k-h-full k-w-full k-border-0 grid-css"
+  (scrollBottom)="loadMore()"
+  class="class-test"
+>
+  <ng-template kendoListViewHeaderTemplate>
+    <h1 class="container-title">Findings</h1>
+    <div class="top-container">
+      <div class="search-bar">
+        <img src="./search-icon.png" alt="search" class="attachment-icon" />
+        <input
+          type="text"
+          class="input-box-css"
+          placeholder="Type here to search"
+          [(ngModel)]="filterQuery"
+          (ngModelChange)="filterTasks()"
+        />
+      </div>
+    </div>
+  </ng-template>
+  <ng-template
+    kendoListViewItemTemplate
+    let-dataItem="dataItem"
+    let-isLast="isLast"
+  >
+    <app-article class="article" [article]="dataItem" [borderBottom]="!isLast">
+    </app-article>
+  </ng-template>
+</kendo-listview>

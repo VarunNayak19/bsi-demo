@@ -1,0 +1,88 @@
+.card {
+  height: 350px;
+  border-width: 0;
+  border-radius: 0;
+  flex: 1;
+  flex-flow: row nowrap;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin: 16px;
+  position: relative;
+  cursor: pointer;
+}
+.card .text-content {
+  padding: 16px;
+  flex-grow: 1;
+}
+.card .text-content .title {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 8px;
+  height: 60px;
+}
+.card .text-content .title .title-text {
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.card .text-content .title .title-icon {
+  height: auto;
+  width: 32px;
+}
+.card .text-content .subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--background-color);
+}
+.card .text-content .subtitle .date {
+  font-size: 14px;
+  margin-top: 0;
+}
+.card .text-content .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .actions {
+  padding: 8px;
+}
+.card .k-card-media {
+  max-width: unset;
+  height: 200px;
+}
+.card .text-section {
+  flex-grow: 1;
+}
+
+.attachment {
+  width: 50px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: var(--secondary-background-color);
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attachment-icon {
+  width: 10px;
+  height: auto;
+  rotate: 30deg;
+}
+
+.attachment-text {
+  font-size: 16px;
+  color: var(--secondary-color);
+  margin-left: 8px;
+}

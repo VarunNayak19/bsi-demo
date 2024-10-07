@@ -1,0 +1,46 @@
+<div>
+  <kendo-card
+    class="card"
+    width="auto"
+    orientation="horizontal"
+    (click)="open()"
+  >
+    <div class="attachment">
+      <img src="./attachment.png" alt="attachment" class="attachment-icon" />
+      <span class="attachment-text">{{ article.attachments }}</span>
+    </div>
+    <img kendoCardMedia [src]="article.image" alt="{{ article.title }} image" />
+    <div class="k-vbox k-column text-section">
+      <div class="text-content">
+        <div kendoCardTitle class="title">
+          <img src="./logo-icon.png" alt="attachment" class="title-icon" />
+          <span class="title-text">{{ article.title }}</span>
+        </div>
+        <div kendoCardSubtitle class="subtitle">
+          <span>Due {{ article.dueDate }}</span>
+          <app-status [status]="article.status"></app-status>
+        </div>
+        <div kendoCardSubtitle class="details">
+          <span>{{ article.category }}</span>
+          <span>{{ article.assignedTo }}</span>
+        </div>
+      </div>
+    </div>
+  </kendo-card>
+  <kendo-dialog
+    title="Details "
+    *ngIf="opened"
+    (close)="close()"
+    [minWidth]="250"
+    [width]="450"
+    [height]="600"
+  >
+    <img
+      kendoCardMedia
+      [src]="article.image"
+      alt="{{ article.title }} image"
+      class="k-w-full"
+    />
+    <app-status [status]="article.status"></app-status>
+  </kendo-dialog>
+</div>

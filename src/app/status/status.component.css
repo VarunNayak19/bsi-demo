@@ -1,0 +1,26 @@
+.status-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 16px;
+  color: var(--primary-color);
+  font-weight: 600;
+  background-color: var(--drafted-color);
+}
+
+.badge-open {
+  background-color: var(--open-color);
+}
+
+.badge-in-progress {
+  background-color: var(--in-progress-color);
+}
+
+.badge-completed {
+  background-color: var(--completed-color);
+}
+
+.badge-drafted {
+  background-color: var(--drafted-color);
+}

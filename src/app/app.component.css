@@ -1,0 +1,43 @@
+.k-listview {
+  font-family: sans-serif;
+}
+
+.container-title {
+  margin: 16px;
+  color: var(--title-color);
+}
+
+.top-container{
+  width: calc(100% - 32px);
+  position: relative;
+  background-color: var(--secondary-color);
+  margin: auto;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.search-bar {
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 250px;
+  display: flex;
+  background-color: var(--primary-color);
+}
+
+.input-box-css {
+  outline: none;
+  border: none;
+  flex: 1;
+}
+
+.k-listview-bordered > .k-listview-header {
+  border: none !important;
+  border-width: 0px !important;
+}
+
+.attachment-icon {
+  width: 16px;
+  height: auto;
+  margin-right: 6px;
+}
